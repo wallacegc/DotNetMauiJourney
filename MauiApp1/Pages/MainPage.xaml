@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.MainPage">
+
+
+    <VerticalStackLayout Spacing="25" Padding="30">
+        <Label Text="Bem-vindo à Home!"
+               FontSize="32"
+               HorizontalOptions="Center" />
+
+        <Button Text="Ir para a Calculadora"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Clicked="OnGoToCalculatorClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

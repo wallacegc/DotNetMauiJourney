@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CalculatorApp.Pages.CalculatorPage"
+             Title="Calculator">
+
+    <VerticalStackLayout Spacing="10" Padding="30">
+        <!-- Display da calculadora -->
+        <Label x:Name="DisplayLabel"
+               Text="0"
+               FontSize="40"
+               HorizontalOptions="End" />
+
+        <!-- Botões da calculadora -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Linha 1 - Números 7, 8, 9, e Operador de Divisão -->
+            <Button Grid.Row="1" Grid.Column="0" Text="7" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="1" Grid.Column="1" Text="8" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="1" Grid.Column="2" Text="9" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="1" Grid.Column="3" Text="/" FontSize="24" Margin="3" Clicked="OnAddButtonClicked" />
+
+            <!-- Linha 2 - Números 4, 5, 6, e Operador de Multiplicação -->
+            <Button Grid.Row="2" Grid.Column="0" Text="4" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="2" Grid.Column="1" Text="5" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="2" Grid.Column="2" Text="6" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="2" Grid.Column="3" Text="*" FontSize="24" Margin="3" Clicked="OnAddButtonClicked" />
+                                                                                   
+            <!-- Linha 3 - Números 1, 2, 3, e Operador de Subtração -->            
+            <Button Grid.Row="3" Grid.Column="0" Text="1" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="3" Grid.Column="1" Text="2" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="3" Grid.Column="2" Text="3" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="3" Grid.Column="3" Text="-" FontSize="24" Margin="3" Clicked="OnAddButtonClicked" />
+
+            <!-- Linha 4 - Números 0, Ponto, Operador de Adição e Igual -->
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="0" FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="4" Grid.Column="2" Text="." FontSize="24" Margin="3" Clicked="OnNumberButtonClicked" />
+            <Button Grid.Row="4" Grid.Column="3" Text="+" FontSize="24"  Margin="3" Clicked="OnAddButtonClicked" />
+
+            <!-- Linha de Operação -->
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Text="=" FontSize="24" Margin="3" Clicked="OnEqualButtonClicked" />
+            <Button Grid.Row="5" Grid.Column="3" Text="C" FontSize="24" Margin="3" Clicked="OnClearButtonClicked" />
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,26 @@
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:calc="clr-namespace:MauiApp1.CalculatorApp.Pages"
+    xmlns:local="clr-namespace:MauiApp1.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiApp1">
+
+    <!--xmlns:gen="clr-namespace:MauiApp1.Pages"
+    <ShellItem Route="home">
+    <ShellContent ContentTemplate="{DataTemplate gen:HomePage}" />
+    </ShellItem>-->
+
+    <!-- Defina as rotas para a navegação da page Inicial -->
+    <ShellItem Route="home" Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+    </ShellItem>
+    
+    <!-- Defina as rotas para a navegação da calculadora -->
+    <ShellItem Route="calculator" Title="Calculator">
+        <ShellContent ContentTemplate="{DataTemplate calc:CalculatorPage}" />
+    </ShellItem>
+
+
+</Shell>
